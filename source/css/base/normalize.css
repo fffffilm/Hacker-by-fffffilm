@@ -230,7 +230,9 @@ pre {
 /* 代码块字体CSS */
 @font-face {
   font-family: "0xProto Nerd Font";
-  src: url('../font/0xProtoNerdFont-Regular.ttf') format('truetype');
+  src: url('../font/0xProtoNerdFont-Regular.woff2') format('woff2'),
+       url('../font/0xProtoNerdFont-Regular.ttf') format('truetype');
+
   font-display: swap;
 }
 
@@ -245,7 +247,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "0xProto", "Consolas", "Roboto Mono", "Menlo", "monospace";
+  font-family: "0xProto Nerd Font","0xProto", "Consolas", "Roboto Mono", "Menlo", "monospace";
   font-size: 1em;
 }
 
