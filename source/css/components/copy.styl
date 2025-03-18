@@ -1,0 +1,32 @@
+//代码块复制
+.highlight{
+	position: relative;
+	border-radius: 12px;
+}
+
+.btn-copy {
+	display: inline-block;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.0);
+    border-style: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 2px 6px;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.3s ease; /* 添加平滑的旋转过渡 */
+}
+
+
+.highlight:hover .btn-copy{
+	display: block;
+}
+
+.btn-copy.rotated {
+    transform: rotate(180deg); /* 旋转 180 度 */
+}

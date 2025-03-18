@@ -1,0 +1,30 @@
+<% if (!index && ((post.toc != false && !is_page() && theme.toc.on) || post.toc)) { %>
+
+<script type="text/javascript">
+    function convertRemToPixels(rem) {    
+        return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    }
+    window.onscroll = function() {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop > convertRemToPixels(40)) {
+            document.getElementsByClassName('toc-article')[0].style.visibility = 'visible';
+        } else {
+            document.getElementsByClassName('toc-article')[0].style.visibility = 'hidden';
+        }
+    }
+</script>
+
+
+<div id="toc" class="toc-article">
+      <div class="toc-content">
+        <%- toc(post.content, {list_number: theme.toc.list_number}) %>
+      </div>
+</div>
+<style>
+        .toc-level-<%= theme.toc.max_depth %> i,
+        .toc-level-<%= theme.toc.max_depth %> ol {
+            display: none !important;
+        }
+    </style>
+
+<% } %>

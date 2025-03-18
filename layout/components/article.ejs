@@ -25,6 +25,19 @@
   </div>
 
 
+  <!-- 更新时间 -->
+  <% if ( item.updated > item.date ){ %>
+      <% if ( theme.postview == 'cover' ){ %>
+          <div class="updated" style="margin-top: 0px">
+      <% } else { %>
+          <div class="updated" >
+      <% } %>
+          <div></div>
+          <span>该文章更新于 <%- item.updated.locale("zh-cn").format("YYYY.MM.DD") %></span>
+      </div>
+  <% } %>
+
+
   <% if (item.photos && item.photos.length){ %>
   <div class="featured-media">
     <% if (item.photos.length && !index){ %>
@@ -47,6 +60,7 @@
           <p><a class="excerpt-btn" href="<%- config.root %><%- item.path %>"><span><%- __('read_more') %></span></a></p>
         <% } %>
       <% } else { %>
+        <%- partial('toc', {post: item}) %>
         <%- item.content %>
       <% } %>
     </div>
@@ -97,6 +111,15 @@
     </div>
     <% } %>
   </div>
+
+<!-- 代码块折叠js -->
+<script type="text/javascript" src="../../../../js/fold.js"></script>
+
+<!-- 复制按钮 -->
+<script type="text/javascript" src="../../../../js/clipboard.js"></script>
+<script type="text/javascript" src="../../../../js/codeCopy.js"></script>
+
+
 </article>
 <% if (!index) { %>
   <%- partial('comment') %>

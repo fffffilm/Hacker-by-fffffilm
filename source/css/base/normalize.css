@@ -184,6 +184,7 @@ sub {
 
 img {
   border: 0;
+  border-radius: 10px;
 }
 
 /**
@@ -226,13 +227,28 @@ pre {
  * Address odd `em`-unit font size rendering in all browsers.
  */
 
+/* 代码块字体CSS */
+@font-face {
+  font-family: "0xProto Nerd Font";
+  src: url('../font/0xProtoNerdFont-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "0xProto";
+  src: url('../font/0xProto-Regular.woff2') format('woff2'),
+       url('../font/0xProto-Regular.otf') format('opentype'),
+       url('../font/0xProto-Regular.ttf') format('truetype');
+}
+
 code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: "0xProto", "Consolas", "Roboto Mono", "Menlo", "monospace";
   font-size: 1em;
 }
+
 
 /* Forms
    ========================================================================== */

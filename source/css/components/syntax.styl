@@ -41,12 +41,12 @@ $hightlightTextDarkColor = #fff
             color color-link
 
 figure.highlight
-  background $hightlightBgCommonColor
+  background #101010
   border 1px solid color-border
-  margin 1em 0
-  padding 1em
-  border-radius 2px
-  text-shadow 0 0 1px $hightlightBorderCommonColor
+  margin 1em 0px -1px 0px
+  padding 0.2em
+  border-radius 0px
+  text-shadow 0 0 1px #000000
   line-height 1.6
   overflow auto
   position relative
@@ -69,16 +69,17 @@ figure.highlight
     border-spacing 0
 
   .gutter
-    color color-meta
+    color #2aa198
     width 20px
     padding-right 15px
     border-right 1px solid color-border
     text-align right
+    user-select none
 
   .code
-    padding-left 15px
-    border-left 1px solid $hightlightBorderCommonColor
-    color $hightlightTextCommonColor
+    padding-left 0px
+    /*border-left 1px solid #fff*/
+    color #FFFFFF
 
   .line
     height: 20px
@@ -166,7 +167,7 @@ pre
           text-shadow 0 0 1px $hightlightBorderDarkColor
 
   figure.highlight
-    background $hightlightBgDarkColor
+    background #000
     text-shadow 0 0 1px $hightlightBorderDarkColor
     figcaption
       text-shadow 0 0 1px $hightlightBorderDarkColor

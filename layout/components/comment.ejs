@@ -11,7 +11,7 @@
 			repo: '<%= theme.gitalk_repo %>',
 			owner: '<%= theme.gitalk_owner %>',
 			admin: ['<%- theme.gitalk_admin.join("', '") %>'],
-			id: location.pathname,
+			id: ['blog-comments', '<%= item.slug %>'],
 			distractionFreeMode: false
 		})
 		gitalk.render('gitalk-container')

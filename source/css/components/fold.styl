@@ -1,0 +1,50 @@
+/* 代码块折叠时的样式 */
+.highlight.collapsed pre {
+    max-height: 16rem; /* 设置代码块最大高度 */
+    overflow: hidden; /* 隐藏超出部分 */
+    position: relative;
+}
+
+/* 折叠时的遮罩效果 */
+.highlight.collapsed:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    /*background: linear-gradient(to bottom, transparent, #000);*/
+}
+
+/* 高亮容器的基础样式 */
+.highlight {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden; /* 确保内容不会溢出 */
+}
+
+/* 展开/折叠按钮的样式 */
+.expand-code {
+    display: inline-block;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 2px 6px;
+    position: absolute;
+    right: 2.5rem;
+    top: 0.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.3s ease-in-out;  /* 旋转动画 */
+}
+
+.highlight:hover .expand-code{
+    display: block;
+}
+.expand-code.rotated {
+    transform: rotate(180deg); /* 旋转 180 度 */
+}
